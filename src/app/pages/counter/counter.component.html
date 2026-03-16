@@ -1,0 +1,4 @@
+<p [style.color]="isNegative() ? 'red' : 'green'">counter: {{ counter() }}</p>
+<p>History: {{ history() }}</p>
+<button (click)="handleIncrement()">Increment</button>
+<button (click)="handleDecrement()">Decrement</button>

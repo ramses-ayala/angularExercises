@@ -1,0 +1,9 @@
+<div id="products" style="display: flex; justify-content: space-around;">
+    @for (product of products; track product.id) {
+        <div>
+            <p>{{ product.name }}</p>
+            <p>${{ product.price }}</p>
+            <button (click)="cartService.addToCart(product)">Add</button>
+        </div>
+    }
+</div>

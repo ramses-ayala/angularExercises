@@ -1,0 +1,18 @@
+<div id="productsAdded">
+    @if (isEmptyShoppingCart()) {
+        <p>Cart is empty !!!</p>
+    } @else {
+        <p>Total Items: {{ totalItemsInCart() }}</p>
+        <p>Total price: {{ total() }}</p>
+       <div>
+            @for (cartItem of cart(); track cartItem.id) {
+                <div>
+                    <p>{{cartItem.name}}</p>
+                    <button (click)="addProduct(cartItem)">+</button>
+                    <span>{{cartItem.quantity}}</span>
+                    <button (click)="deleteProduct(cartItem.id)">-</button>
+                </div>
+            }
+        </div>
+    }
+</div>
